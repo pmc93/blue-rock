@@ -1,15 +1,10 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
 root: home
 chapters:
-- file: introduction
-- file: installation
-- file: inputs
-- file: outputs
-- file: tables
-- file: notebooks-collection
-- file: citations
-- file: utilities
-- file: changelog
+- file: software
+- file: training
+- file: case-studies
+- file: about
+- file: contact
