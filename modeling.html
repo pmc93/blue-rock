@@ -21,20 +21,7 @@
 			</header>
 
 			<!-- Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="software.html">Software</a></li>
-						<li><a href="training.html">Training</a></li>
-						<li><a href="case-studies.html">Case Studies</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-					<a href="#" class="close">Close</a>
-				</div>
-			</nav>
+				<nav id="menu"></nav>
 
 			<!-- Wrapper -->
 			<section id="wrapper">
@@ -53,29 +40,33 @@
 
 						<section class="features">
 							<article>
-								<a href="#" class="image"><img src="images/case-falster.jpg" alt="Falster Coastal Recharge" /></a>
-								<h3 class="major">Saltwater Intrusion Control — Falster, Denmark</h3>
-								<p>We developed a seasonal brackish water injection strategy supported by tTEM mapping and long-term monitoring to preserve freshwater reserves in a coastal aquifer.</p>
-								<a href="#" class="special">Read more</a>
+								<a href="recharge-remote-sensing.html" class="image"><img src="images/remote-recharge.jpg" alt="Groundwater Recharge" /></a>
+								<h3 class="major">Estimating Recharge from Remote Sensing</h3>
+								<p>We used satellite-based rainfall, vegetation, and soil data to estimate groundwater recharge patterns across arid regions, validating results with field observations and models.</p>
+								<a href="recharge-remote-sensing.html" class="special">Read more</a>
 							</article>
+							
 							<article>
-								<a href="#" class="image"><img src="images/case-senegal.jpg" alt="Senegal Aquifer Recharge" /></a>
-								<h3 class="major">Managed Aquifer Recharge — Senegal</h3>
-								<p>Our team led field geophysics, remote sensing, and MAR design for aquifer replenishment using natural infiltration and solar-powered pilot systems in rural communities.</p>
-								<a href="#" class="special">Read more</a>
+								<a href="saltwater-intrusion.html" class="image"><img src="images/ert-coast.jpg" alt="Saltwater Intrusion" /></a>
+								<h3 class="major">Saltwater Intrusion Mapping</h3>
+								<p>We used ERT surveys to delineate the freshwater–saltwater interface along coastal aquifers and guide protection strategies.</p>
+								<a href="saltwater-intrusion.html" class="special">Read more</a>
 							</article>
+
 							<article>
-								<a href="#" class="image"><img src="images/case-grindsted.jpg" alt="Grindsted Contaminated Site" /></a>
-								<h3 class="major">Contaminated Site Mapping — Grindsted, Denmark</h3>
-								<p>Using 3D geophysical imaging and borehole confirmation, we delineated a leachate plume from a historic landfill impacting surrounding surface water and aquifers.</p>
-								<a href="#" class="special">Read more</a>
+								<a href="injection-monitoring.html" class="image"><img src="images/ert-injection.jpg" alt="Injection Monitoring" /></a>
+								<h3 class="major">Injection Monitoring with ERT</h3>
+								<p>Time-lapse electrical resistivity tomography visualized how injected water moved underground, improving design and effectiveness of managed aquifer recharge and remediation.</p>
+								<a href="injection-monitoring.html" class="special">Read more</a>
 							</article>
+
 							<article>
-								<a href="#" class="image"><img src="images/case-malawi.jpg" alt="Malawi Training" /></a>
-								<h3 class="major">Capacity Building in Malawi</h3>
-								<p>We delivered field-based hydrogeophysics training and supported national mapping campaigns to improve rural groundwater access and monitoring networks.</p>
-								<a href="#" class="special">Read more</a>
+								<a href="geostructure-app.html" class="image"><img src="images/app-mobile.jpg" alt="Geological Structure App" /></a>
+								<h3 class="major">Estimating Geology with a Mobile App</h3>
+								<p>Using mobile tools and low-cost sensors, we helped teams interpret subsurface structure in the field without delay.</p>
+								<a href="geostructure-app.html" class="special">Read more</a>
 							</article>
+
 						</section>
 
 					</div>
@@ -129,6 +120,15 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('menu.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('menu').innerHTML = data;
+						});
+				});
+		</script>
 
 	</body>
 </html>

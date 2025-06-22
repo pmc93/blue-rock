@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
@@ -21,27 +22,15 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Blue Rock Hydro</a></h1>
-						<nav>
+						<nav style="display: flex; align-items: center; gap: 1em;">
+							<a href="index.html" style="font-size: 0.9em;">EN</a>
+							<a href="index-fr.html" style="font-size: 0.9em;">FR</a>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="software.html">Software</a></li>
-								<li><a href="training-teaching.html">Training</a></li>
-								<li><a href="field-studies.html">Case Studies</a></li>
-								<li><a href="desktop-studies.html">Case Studies</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+					<nav id="menu"></nav>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -50,7 +39,7 @@
 								<img src="./images/icon.svg" alt="My SVG Icon" width="45" height="45" style="transform: translateY(-10px);">
 								<h2 style="margin: 0;">Welcome to Blue Rock Hydro</h2>
 							</div>
-							<p>Surveying, Softwaring, and Training for Sustainable Groundwater Solutions.</p>
+							<p>Surveys, Software, and Workshops for Sustainable Groundwater Solutions.</p>
 						</div>
 					</section>
 
@@ -74,9 +63,9 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Training</h2>
+										<h2 class="major">Workshops</h2>
 										<p>We offer hands-on workshops and e-learning programs in groundwater modeling, geophysics, and water resource management.</p>
-										<a href="training-teaching.html" class="special">View courses</a>
+										<a href="workshops.html" class="special">View courses</a>
 									</div>
 								</div>
 							</section>
@@ -86,9 +75,9 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="./images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Case Studies</h2>
+										<h2 class="major">Surveys</h2>
 										<p>Explore how we've supported real-world groundwater projects across Africa and Europe using data, tools, and training.</p>
-										<a href="case-studies.html" class="special">Explore projects</a>
+										<a href="surveys.html" class="special">Explore projects</a>
 									</div>
 								</div>
 							</section>
@@ -98,9 +87,9 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="./images/pic02.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Gallery</h2>
+										<h2 class="major">Modeling Gallery</h2>
 										<p>Browse selected models, code-based experiments, and visual insights from our field and analysis work — all powered by Python.</p>
-										<a href="desktop-studies.html" class="special">Enter the gallery</a>
+										<a href="modeling.html" class="special">Enter the gallery</a>
 									</div>
 								</div>
 							</section>
@@ -151,6 +140,15 @@
 			<script src="./assets/js/breakpoints.min.js"></script>
 			<script src="./assets/js/util.js"></script>
 			<script src="./assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('menu.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('menu').innerHTML = data;
+						});
+				});
+			</script>
 
 	</body>
 </html>

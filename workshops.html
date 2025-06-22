@@ -15,26 +15,11 @@
 			<!-- Header -->
 			<header id="header">
 				<h1><a href="index.html">Blue-Rock</a></h1>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
+				<nav><a href="#menu">Menu</a></nav>
 			</header>
 
 			<!-- Menu -->
-			<nav id="menu">
-				<div class="inner">
-					<h2>Menu</h2>
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="software.html">Software</a></li>
-						<li><a href="training.html">Training</a></li>
-						<li><a href="case-studies.html">Case Studies</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-					<a href="#" class="close">Close</a>
-				</div>
-			</nav>
+				<nav id="menu-placeholder"></nav>
 
 			<!-- Wrapper -->
 			<section id="wrapper">
@@ -77,65 +62,50 @@
 								<a href="mailto:info@blue-rock.dk" class="special">Invite us to teach</a>
 							</article>
 						</section>
-
 						<h3 class="major">Want to Co-Host a Training?</h3>
 						<p>We're open to collaboration on workshops, short courses, and capacity-building programs globally. We tailor materials to your region, language, and technical level.</p>
-
 						<ul class="actions">
-							<li><a href="contact.html" class="button">Contact Us</a></li>
+							<li><a href="mailto:info@blue-rock.dk" class="button">Contact</a></li>
 						</ul>
-
 					</div>
 				</div>
 			</section>
 
 			<!-- Footer -->
-			<section id="footer">
-				<div class="inner">
-					<h2 class="major">Get in touch</h2>
-					<p>For course materials, teaching invitations, or joint capacity building projects — drop us a line.</p>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-					</form>
-					<ul class="contact">
-						<li class="icon solid fa-home">
-							Blue-Rock ApS<br />
-							Copenhagen, Denmark
-						</li>
-						<li class="icon solid fa-phone">+45 12 34 56 78</li>
-						<li class="icon solid fa-envelope"><a href="mailto:info@blue-rock.dk">info@blue-rock.dk</a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Blue-Rock. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</section>
+				<div id="footer-placeholder"></div>
 
 		</div>
 
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
+		<script src="./assets/js/jquery.min.js"></script>
+		<script src="./assets/js/jquery.scrollex.min.js"></script>
+		<script src="./assets/js/browser.min.js"></script>
+		<script src="./assets/js/breakpoints.min.js"></script>
+		<script src="./assets/js/util.js"></script>
+		<script src="./assets/js/main.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				fetch('menu.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('menu-placeholder').innerHTML = data;
+					});
+			});
+		</script>
+		<script>
+			const footerTitle = "Contact us"
+			const footerMessage = "Interested in more? Drop us a line.";
+		
+			window.addEventListener("DOMContentLoaded", () => {
+			fetch('footer.html')
+				.then(response => response.text())
+				.then(html => {
+					let customized = html.replace('[FOOTER_TITLE]', footerTitle);
+					customized = customized.replace('[FOOTER_MESSAGE]', footerMessage);
+					document.getElementById('footer-placeholder').outerHTML = customized;
+				})
+				.catch(err => console.error("Footer load failed", err));
+		});
+		</script>
 	</body>
 </html>
