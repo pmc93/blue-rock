@@ -9,7 +9,7 @@
 	<title>Blue Rock Hydro</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Blue-Rock provides software, training, and case-based expertise in groundwater and environmental management.">
+		<meta name="description" content="Blue Rock Hydrogeology provides training, software, and case-based expertise in groundwater and environmental management.">
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 	</head>
@@ -21,7 +21,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Blue Rock Hydro</a></h1>
+						<h1><a href="index.html">Blue Rock Hydrogeology</a></h1>
 						<nav style="display: flex; align-items: center; gap: 1em;">
 							<a href="index.html" style="font-size: 0.9em;">EN</a>
 							<a href="index-fr.html" style="font-size: 0.9em;">FR</a>
@@ -36,10 +36,10 @@
 					<section id="banner">
 						<div class="inner">
 							<div class="logo" style="display: flex; align-items: center; gap: 0.5em;">
-								<img src="./images/icon.svg" alt="My SVG Icon" width="45" height="45" style="transform: translateY(-10px);">
-								<h2 style="margin: 0;">Welcome to Blue Rock Hydro</h2>
+								<img src="./images/icon.svg" alt="My SVG Icon" width="100" height="100" style="transform: translateY(-10px);">
+								<h2 style="margin: 0;">Welcome to Blue Rock Hydrogeology</h2>
 							</div>
-							<p>Surveys, Software, and Workshops for Sustainable Groundwater Solutions.</p>
+							<p>Applied Solutions for Sustainable Groundwater Management</p>
 						</div>
 					</section>
 
@@ -51,9 +51,9 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="./images/pic01.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Software</h2>
+										<h2 class="major">Field Work</h2>
 										<p>We develop open-source tools and custom solutions for hydrogeological modeling, data visualization, and environmental monitoring.</p>
-										<a href="software.html" class="special">Learn more</a>
+										<a href="surveys.html" class="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -75,9 +75,9 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="./images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Surveys</h2>
+										<h2 class="major">Software</h2>
 										<p>Explore how we've supported real-world groundwater projects across Africa and Europe using data, tools, and training.</p>
-										<a href="surveys.html" class="special">Explore projects</a>
+										<a href="software.html" class="special">Explore projects</a>
 									</div>
 								</div>
 							</section>
@@ -96,41 +96,17 @@
 
 				<!-- Footer -->
 					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in Touch</h2>
-							<p>If you have any questions, project inquiries, or would like to collaborate, we’d love to hear from you. Reach out to us to start a conversation—we’re here to help and open to new opportunities.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Blue-Rock ApS<br />
-									Copenhagen, Denmark
-								</li>
-								<li class="icon solid fa-envelope"><a href="mailto:info@blue-rock.dk">info@blue-rock.dk</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+						<div id="footer-placeholder"></div>
+							<script>
+							fetch("footer.html")
+								.then(response => response.text())
+								.then(html => {
+								document.getElementById("footer-placeholder").innerHTML = html;
+								});
+							</script>
 						</div>
 					</section>
-			</div>
+			
 
 		<!-- Scripts -->
 			<script src="./assets/js/jquery.min.js"></script>
