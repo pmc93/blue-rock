@@ -91,28 +91,13 @@
 		<script src="./assets/js/util.js"></script>
 		<script src="./assets/js/main.js"></script>
 		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				fetch('menu.html')
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById('menu-placeholder').innerHTML = data;
-					});
-			});
-		</script>
-		<script>
-			const footerTitle = "Contact us"
-			const footerMessage = "Interested in more? Drop us a line.";
-		
-			window.addEventListener("DOMContentLoaded", () => {
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(html => {
-					let customized = html.replace('[FOOTER_TITLE]', footerTitle);
-					customized = customized.replace('[FOOTER_MESSAGE]', footerMessage);
-					document.getElementById('footer-placeholder').outerHTML = customized;
-				})
-				.catch(err => console.error("Footer load failed", err));
-		});
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('menu.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('menu').innerHTML = data;
+						});
+				});
 		</script>
 	</body>
 </html>
