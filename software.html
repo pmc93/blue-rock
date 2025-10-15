@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Software | Blue-Rock</title>
+		<title>Software | Blue Rock Hydrogeology</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Explore Blue-Rock's open-source and custom software tools for groundwater modeling, geophysical analysis, and environmental monitoring.">
+		<meta name="description" content="Explore custom software tools for groundwater modeling, geophysical analysis, and environmental monitoring.">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -78,41 +78,17 @@
 
 			<!-- Footer -->
 			<section id="footer">
-				<div class="inner">
-					<h2 class="major">Get in touch</h2>
-					<p>Interested in a demo, collaboration, or custom feature? Reach out and let’s build it together.</p>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-					</form>
-					<ul class="contact">
-						<li class="icon solid fa-home">
-							Blue-Rock ApS<br />
-							Copenhagen, Denmark
-						</li>
-						<li class="icon solid fa-phone">+45 12 34 56 78</li>
-						<li class="icon solid fa-envelope"><a href="mailto:info@blue-rock.dk">info@blue-rock.dk</a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Blue-Rock. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+				<div id="footer-placeholder"></div>
+					<script>
+					fetch("footer.html")
+						.then(response => response.text())
+						.then(html => {
+						document.getElementById("footer-placeholder").innerHTML = html;
+						});
+					</script>
 				</div>
 			</section>
+	
 
 		</div>
 

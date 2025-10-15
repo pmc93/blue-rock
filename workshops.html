@@ -72,7 +72,18 @@
 			</section>
 
 			<!-- Footer -->
+			<!-- Footer -->
+			<section id="footer">
 				<div id="footer-placeholder"></div>
+					<script>
+					fetch("footer.html")
+						.then(response => response.text())
+						.then(html => {
+						document.getElementById("footer-placeholder").innerHTML = html;
+						});
+					</script>
+				</div>
+			</section>
 
 		</div>
 

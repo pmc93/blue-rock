@@ -14,7 +14,7 @@
 
 			<!-- Header -->
 			<header id="header">
-				<h1><a href="index.html">Blue-Rock</a></h1>
+				<h1><a href="index.html">Blue Rock Hydrogeology</a></h1>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -71,39 +71,14 @@
 
 			<!-- Footer -->
 			<section id="footer">
-				<div class="inner">
-					<h2 class="major">Get in touch</h2>
-					<p>Want to collaborate or learn more about our case studies? Reach out for partnerships, data, or implementation support.</p>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-					</form>
-					<ul class="contact">
-						<li class="icon solid fa-home">
-							Blue-Rock ApS<br />
-							Copenhagen, Denmark
-						</li>
-						<li class="icon solid fa-phone">+45 12 34 56 78</li>
-						<li class="icon solid fa-envelope"><a href="mailto:info@blue-rock.dk">info@blue-rock.dk</a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Blue-Rock. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+				<div id="footer-placeholder"></div>
+					<script>
+					fetch("footer.html")
+						.then(response => response.text())
+						.then(html => {
+						document.getElementById("footer-placeholder").innerHTML = html;
+						});
+					</script>
 				</div>
 			</section>
 
