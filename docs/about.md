@@ -1,9 +1,8 @@
 # About Blue-Rock
-
-At Blue-Rock, we are passionate about solving complex environmental challenges through innovative science and technology. With a strong foundation in hydrogeology, geophysics, and data-driven modeling, we help clients worldwide manage and protect their water resources.
+At Blue Rock Hydrogeology, we work to address environmental and groundwater challenges through practical, science-based methods. Building on solid expertise in hydrogeology, geophysics, and data analysis, we support partners and clients in understanding, managing, and protecting their water resources.
 
 ## Our Mission
-To deliver actionable, science-based solutions in groundwater and environmental management.
+To provide clear, reliable, and technically sound solutions in groundwater and environmental management.
 
 ## Our Team
-Our consultants are researchers and engineers with extensive experience across academic, NGO, and industrial sectors.
+Our team brings together researchers and engineers with broad experience from universities, consultancies, and public institutions.
