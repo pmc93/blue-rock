@@ -14,6 +14,9 @@
 		<!-- Header -->
 			<header id="header">
 				<h1><a href="../index.html">Blue Rock Hydrogeology</a></h1>
+				<nav>
+					<a href="../surveys.html">Back to Case Studies</a>
+				</nav>
 			</header>
 
       <!-- Wrapper -->
@@ -107,7 +110,7 @@
                 <p>
                 The Save River alluvium consists primarily of unconsolidated sands, gravels, and silts deposited by episodic floods 
                 within a broad incised valley cut into the underlying crystalline basement. The aquifers are generally unconfined to 
-                semi-confined, with variable thickness (5–30 m) and strong lateral heterogeneity. Recharge occurs through infiltration 
+                semi-confined, with variable thickness (5-30 m) and strong lateral heterogeneity. Recharge occurs through infiltration 
                 of seasonal river flows and local rainfall, while discharge is driven by evapotranspiration and abstraction from numerous
                 boreholes and shallow wells. Electrical and electromagnetic imaging revealed distinct layering between coarse, resistive 
                 channel sands and finer, more conductive floodplain silts—providing clear insight into groundwater flow paths and storage 
@@ -145,10 +148,10 @@
             const diff = Math.abs(center - imgCenter);
             if (diff < rect.width / 3) {
                 img.style.filter = 'grayscale(0%) brightness(100%)';
-                img.style.transform = 'scale(1.02)';
+                img.style.transform = 'scale(1.0)';
             } else {
                 img.style.filter = 'grayscale(0%) brightness(100%)';
-                img.style.transform = 'scale(0.96)';
+                img.style.transform = 'scale(1.0)';
             }
             });
         }
