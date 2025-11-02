@@ -11,10 +11,18 @@
   <body class="is-preload">
     <div id="page-wrapper">
 
-		<!-- Header -->
+
+      <!-- Header -->
 			<header id="header">
 				<h1><a href="../index.html">Blue Rock Hydrogeology</a></h1>
+				<nav>
+					<a href="#surveys">Back to Case Studies</a>
+				</nav>
 			</header>
+
+			<!-- Menu -->
+				<nav id="surveys"></nav>
+      
 
       <!-- Wrapper -->
       <section id="wrapper">
@@ -140,10 +148,10 @@
             const diff = Math.abs(center - imgCenter);
             if (diff < rect.width / 3) {
                 img.style.filter = 'grayscale(0%) brightness(100%)';
-                img.style.transform = 'scale(1.02)';
+                img.style.transform = 'scale(1.0)';
             } else {
                 img.style.filter = 'grayscale(0%) brightness(100%)';
-                img.style.transform = 'scale(0.96)';
+                img.style.transform = 'scale(1.0)';
             }
             });
         }
@@ -186,6 +194,15 @@
       <script src="../assets/js/breakpoints.min.js"></script>
       <script src="../assets/js/util.js"></script>
       <script src="../assets/js/main.js"></script>
+      <script>
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('../surveys.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('surveys').innerHTML = data;
+						});
+				});
+		</script>
     </div>
   </body>
 </html>
