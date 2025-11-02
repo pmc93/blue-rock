@@ -13,12 +13,10 @@
 
 	
 		<!-- Header -->
-			<header id="header" class="alt">
+			<header id="header">
 				<h1><a href="../index.html">Blue Rock Hydrogeology</a></h1>
-				<nav style="display: flex; align-items: center; gap: 1em;">
-					<a href="../index.html" style="font-size: 0.9em;">EN</a>
-					<a href="../index-fr.html" style="font-size: 0.9em;">FR</a>
-					<a href="../menu">Menu</a>
+				<nav>
+					<a href="#menu">Menu</a>
 				</nav>
 			</header>
 
@@ -195,6 +193,15 @@
       <script src="../assets/js/breakpoints.min.js"></script>
       <script src="../assets/js/util.js"></script>
       <script src="../assets/js/main.js"></script>
+	  <script>
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('../menu.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('menu').innerHTML = data;
+						});
+				});
+		</script>
     </div>
   </body>
 </html>
