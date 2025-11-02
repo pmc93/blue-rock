@@ -15,13 +15,7 @@
 		<!-- Header -->
 			<header id="header">
 				<h1><a href="../index.html">Blue Rock Hydrogeology</a></h1>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
 			</header>
-
-		<!-- Menu -->
-			<nav id="menu"></nav>
 
       <!-- Wrapper -->
       <section id="wrapper">
@@ -193,15 +187,6 @@
       <script src="../assets/js/breakpoints.min.js"></script>
       <script src="../assets/js/util.js"></script>
       <script src="../assets/js/main.js"></script>
-	  <script>
-				document.addEventListener("DOMContentLoaded", () => {
-					fetch('../menu.html')
-						.then(response => response.text())
-						.then(data => {
-							document.getElementById('menu').innerHTML = data;
-						});
-				});
-		</script>
     </div>
   </body>
 </html>
