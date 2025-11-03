@@ -45,16 +45,16 @@
             </section>
 
             <!-- Photo Gallery -->
-            <section id="gallery-section" style="margin-bottom:2em;">
+            <section id="gallery-section" style="margin-bottom:4em;">
             <div id="gallery"
                  style="display:flex; overflow-x:auto; scroll-behavior:smooth;
                         scroll-snap-type:x mandatory; gap:2em;
-                        padding:0 5vw; scrollbar-width:none; -ms-overflow-style:none;">
+                        padding:0 0vw; scrollbar-width:none; -ms-overflow-style:none;">
               <style>#gallery::-webkit-scrollbar{display:none}</style>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
+              <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
                 <img src="images/saraya/pic01.jpeg" alt="tTEM survey setup"
-                     style="width:100%; border-radius:14px;
+                     style="height: 520px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
@@ -62,9 +62,9 @@
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
+              <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
                 <img src="images/saraya/pic02.jpg" alt="Soil sampling"
-                     style="width:100%; border-radius:14px;
+                     style="height: 520px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
@@ -72,9 +72,9 @@
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
+              <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
                 <img src="images/saraya/pic03.jpg" alt="Community workshop"
-                     style="width:100%; border-radius:14px;
+                     style="height: 520px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
@@ -82,9 +82,9 @@
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
+              <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
                 <img src="images/saraya/pic04.jpg" alt="Field overview"
-                     style="width:100%; border-radius:14px;
+                     style="height: 520px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
@@ -100,7 +100,7 @@
                 area of intense gold exploration and mining activity. The region hosts both large-scale industrial operations and 
                 numerous artisanal mining sites, which have expanded rapidly in recent years. While the sector supports local livelihoods,
                  it also places growing pressure on surface and groundwater resources through increased water abstraction, sedimentation,
-                 and contamination. The area’s crystalline basement geology and limited perennial surface water make groundwater the 
+                 and contamination. The area's crystalline basement geology and limited perennial surface water make groundwater the 
                  primary source for drinking, domestic use, and small-scale processing. Understanding its distribution and vulnerability
                  has become central to sustainable resource management.
                 </p>
@@ -192,8 +192,10 @@
 
       [leftArrow, rightArrow].forEach(btn => {
         btn.style.position = 'absolute';
-        btn.style.top = '50%';
-        btn.style.transform = 'translateY(-50%)';
+        //btn.style.top = '50%';
+        //btn.style.transform = 'translateY(-50%)';
+        btn.style.bottom = '-8rem';  // moves buttons below gallery, adjust value as needed
+        btn.style.transform = 'none';
         btn.style.background = 'none';
         btn.style.border = 'none';
         btn.style.outline = 'none';
