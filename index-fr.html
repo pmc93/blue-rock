@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blue Rock Hydrogeology | Bientôt disponible</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+
+      <!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Blue Rock Hydrogeology</a></h1>
+						<nav style="display: flex; align-items: center; gap: 1em;">
+							<a href="index.html" style="font-size: 0.9em;">EN</a>
+							<a href="index-fr.html" style="font-size: 0.9em;">FR</a>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu"></nav>
+
+
+      <!-- Main Section -->
+      <section id="wrapper">
+        <header>
+          <div class="inner">
+            <h2>Bientôt disponible</h2>
+            <p>La version française du site Blue Rock Hydrogeology est en cours de préparation.</p>
+          </div>
+        </header>
+
+        <div class="wrapper">
+          <div class="inner" style="text-align:center;">
+            <img src="./images/icon.svg" alt="Blue Rock Hydrogeology" style="max-width:100px; margin-bottom:1.5em;">
+            <h3>Merci de votre intérêt !</h3>
+            <p>Le contenu en français sera bientôt disponible, incluant nos projets de terrain, formations et outils logiciels open-source.</p>
+            <p>En attendant, vous pouvez consulter la version anglaise du site.</p>
+            <a href="index.html" class="special">Visiter la version anglaise</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; Blue Rock Hydrogeology. Tous droits réservés.</li>
+            <li>Design : <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+				document.addEventListener("DOMContentLoaded", () => {
+					fetch('menu.html')
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById('menu').innerHTML = data;
+						});
+				});
+			</script>
+  </body>
+</html>
