@@ -1,11 +1,46 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Saraya, Senegal</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+  <title>Saraya, Senegal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+
+  <style>
+    .gallery-arrow {
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      color: #ccc;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      position: absolute;
+      bottom: -2.5em;
+      z-index: 5;
+    }
+    .gallery-arrow:hover {
+      color: #fff;
+    }
+    .gallery-arrow.left {
+      left: 45%;
+    }
+    .gallery-arrow.right {
+      right: 45%;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-arrow {
+        position: static;
+        transform: none;
+        display: inline-block;
+        margin: 1em 0.5em 0;
+      }
+    }
+  </style>
   </head>
 
   <body class="is-preload">
