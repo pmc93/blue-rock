@@ -53,43 +53,73 @@
                         padding:0 2vw; scrollbar-width:none; -ms-overflow-style:none;">
               <style>#gallery::-webkit-scrollbar{display:none}</style>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/sine-saloum/pic02.HEIC" alt="tTEM survey setup"
-                     style="width:100%; border-radius:14px;
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic01.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  tTEM survey across agricultural plots
+                  Picture X
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/sine-saloum/pic03.HEI" alt="Soil sampling"
-                     style="width:100%; border-radius:14px;
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic02.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Soil and lithology sampling
+                  Picture X
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/sine-saloum/pic04.HEI" alt="Community workshop"
-                     style="width:100%; border-radius:14px;
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic02.jpeg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Community groundwater workshop
+                  Picture X
                 </figcaption>
               </figure>
 
-              <figure style="flex:0 0 40%; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/sine-saloum/pic05.HEI" alt="Field overview"
-                     style="width:100%; border-radius:14px;
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic02B.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Typical field conditions in the delta
+                  Picture X
+                </figcaption>
+              </figure>
+
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic03.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
+                            filter:grayscale(0%) brightness(100%);
+                            transition:filter .4s, transform .4s;">
+                <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
+                  Picture X
+                </figcaption>
+              </figure>
+
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic04.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
+                            filter:grayscale(0%) brightness(100%);
+                            transition:filter .4s, transform .4s;">
+                <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
+                  Picture X
+                </figcaption>
+              </figure>
+
+               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
+                <img src="images/bentiu-rubkona/pic05.jpg" alt="None"
+                     style="height: 500px; width: auto; border-radius:14px;
+                            filter:grayscale(0%) brightness(100%);
+                            transition:filter .4s, transform .4s;">
+                <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
+                  Picture X
                 </figcaption>
               </figure>
               </section>
@@ -173,7 +203,7 @@
         });
       });
 
-      // --- Add arrows dynamically ---
+       // --- Add arrows dynamically ---
       const leftArrow = document.createElement('button');
       const rightArrow = document.createElement('button');
 
@@ -191,18 +221,22 @@
         btn.style.fontSize = '2.2em';
         btn.style.color = '#888';
         btn.style.cursor = 'pointer';
-        btn.style.transition = 'color 0.2s ease';
+        btn.style.transition = 'color 0.2s ease, opacity 0.2s ease';
         btn.style.zIndex = '5';
-        btn.onmouseenter = () => btn.style.color = '#111';
-        btn.onmouseleave = () => btn.style.color = '#888';
-        btn.onfocus = () => btn.blur(); // prevents blue box on click
+        btn.style.opacity = '0.25'; // 🔹 make transparent
+        btn.onmouseenter = () => {
+          btn.style.color = '#111';
+          btn.style.opacity = '1'; // 🔹 full on hover
+        };
+        btn.onmouseleave = () => {
+          btn.style.color = '#888';
+          btn.style.opacity = '0.25'; // 🔹 fade back
+        };
+        btn.onfocus = () => btn.blur();
       });
 
       leftArrow.style.left = '-6rem';
       rightArrow.style.right = '-6rem';
-
-      leftArrow.onmouseenter = rightArrow.onmouseenter = e => e.target.style.color = '#111';
-      leftArrow.onmouseleave = rightArrow.onmouseleave = e => e.target.style.color = '#888';
 
       leftArrow.onclick = () => gallery.scrollBy({ left: -gallery.clientWidth * 0.5, behavior: 'smooth' });
       rightArrow.onclick = () => gallery.scrollBy({ left: gallery.clientWidth * 0.5, behavior: 'smooth' });
