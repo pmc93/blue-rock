@@ -38,7 +38,7 @@
             <h3 class="major">Background</h3>
             <p>
               The Sine Saloum Delta is one of Senegal's most dynamic coastal systems, where groundwater, surface water, and 
-              tidal processes interact across a mosaic of agricultural and mangrove landscapes. The region lies within the 
+              tidal processes interact across a agricultural and mangrove landscapes. The region lies within the 
               drought-prone Sahel and faces increasing salinity due to reduced rainfall, over-abstraction, and marine intrusion. 
               Despite its agricultural importance, Senegal relies on imports for roughly 70 percent of its food supply, making the 
               protection of freshwater resources in the delta critical to food security and local livelihoods.
@@ -54,52 +54,42 @@
               <style>#gallery::-webkit-scrollbar{display:none}</style>
 
                <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/bentiu-rubkona/pic01.jpg" alt="None"
+                <img src="images/sine-saloum/pic01.jpg" alt="None"
                      style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                  Figure 1: Abandoned well in the survey area.
                 </figcaption>
               </figure>
 
                <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/bentiu-rubkona/pic02.jpg" alt="None"
+                <img src="images/sine-saloum/pic02.jpg" alt="None"
                      style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                  Figure 2: Newly installed well in the survey area.
                 </figcaption>
               </figure>
 
                <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/bentiu-rubkona/pic02.jpeg" alt="None"
+                <img src="images/sine-saloum/pic02B.jpg" alt="None"
                      style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                  Figure 3: Stratigraphy observed in the deposits from well diggings.
                 </figcaption>
               </figure>
 
                <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/bentiu-rubkona/pic02B.jpg" alt="None"
+                <img src="images/sine-saloum/pic03.jpg" alt="None"
                      style="height: 500px; width: auto; border-radius:14px;
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
-                </figcaption>
-              </figure>
-
-               <figure style="flex:0 0 auto; margin:0 auto; text-align:center; scroll-snap-align:center;">
-                <img src="images/bentiu-rubkona/pic03.jpg" alt="None"
-                     style="height: 500px; width: auto; border-radius:14px;
-                            filter:grayscale(0%) brightness(100%);
-                            transition:filter .4s, transform .4s;">
-                <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                 Figure 4: Water tower used for the local drinking water supply.
                 </figcaption>
               </figure>
 
@@ -109,7 +99,7 @@
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                  Figure 5: Local peanut farming irrigated with groundwater from aquifers near the coast.
                 </figcaption>
               </figure>
 
@@ -119,7 +109,7 @@
                             filter:grayscale(0%) brightness(100%);
                             transition:filter .4s, transform .4s;">
                 <figcaption style="font-size:.9em;color:#777;margin-top:.4em;">
-                  Picture X
+                  Figure 6: tTEM setup next to deltaic sediment deposits, with mangroves visible in the background.
                 </figcaption>
               </figure>
               </section>
@@ -128,10 +118,8 @@
                 <h3 class="major">Hydrogeological setting</h3>
                 <p>
                 The delta's shallow subsurface consists of alternating layers of silty sands, ferruginous clasts, and grey 
-                estuarine clays rich in shell fragments. These materials reflect cycles of marine and fluvial deposition that 
-                strongly influence groundwater flow and salinity distribution. Field logging confirmed low-permeability clay 
-                horizons that restrict vertical recharge, creating perched or semi-confined aquifers vulnerable to saltwater 
-                upconing during the dry season.
+                estuarine clays rich in shell fragments. Field logging confirmed a low-permeability clay 
+                horizon that confines a somewhat productive aquifer.
                 </p>
                 </section>
 
@@ -149,8 +137,7 @@
                 <section id="Outcomes and relevance">
                 <h3 class="major">Outcomes and relevance</h3>
                 <p>
-                The integrated approach demonstrates how modern, field-portable geophysics can support sustainable groundwater 
-                management in vulnerable deltaic environments. By linking resistivity models with soil profiles and farming practices, 
+                By linking resistivity models with soil profiles and farming practices, 
                 the study helps target interventions where shallow aquifers remain fresh and highlights areas requiring salinity 
                 mitigation. This work forms part of ongoing regional efforts to strengthen climate resilience and ensure equitable 
                 access to freshwater resources in Senegal's coastal communities.
@@ -203,7 +190,7 @@
         });
       });
 
-       // --- Add arrows dynamically ---
+          // --- Add arrows dynamically ---
       const leftArrow = document.createElement('button');
       const rightArrow = document.createElement('button');
 
@@ -238,12 +225,14 @@
       leftArrow.style.left = '-6rem';
       rightArrow.style.right = '-6rem';
 
+
       leftArrow.onclick = () => gallery.scrollBy({ left: -gallery.clientWidth * 0.5, behavior: 'smooth' });
       rightArrow.onclick = () => gallery.scrollBy({ left: gallery.clientWidth * 0.5, behavior: 'smooth' });
 
       gallery.parentElement.style.position = 'relative';
       gallery.parentElement.appendChild(leftArrow);
       gallery.parentElement.appendChild(rightArrow);
+
 
 
         // (Optional) keep highlight correct on resize
